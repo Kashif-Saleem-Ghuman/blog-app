@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: "John", photo:"https://t3.ftcdn.net/jpg/02/47/40/98/360_F_247409832_pPugfgU5cKLsrH5OCJRMn5JTcy2L1Rrg.jpg", Bio:"Anything",  posts_counter: 5) }
+  subject { User.new(name: 'John', photo: 'https://t3.ftcdn.net/jpg/02/47/40/98/360_F_247409832_pPugfgU5cKLsrH5OCJRMn5JTcy2L1Rrg.jpg', Bio: 'Anything', posts_counter: 5) }
 
   before { subject.save }
 
@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'posts_counter should be an integer' do
-    subject.posts_counter = "string"
+    subject.posts_counter = 'string'
     expect(subject).to_not be_valid
   end
 
@@ -23,7 +23,8 @@ RSpec.describe User, type: :model do
   describe '#recent_posts' do
     before do
       6.times do |p|
-        Post.create(title: "Post #{p}", text: "Text #{p}",comments_counter: 10, author_id: subject.id, likes_counter: 10)
+        Post.create(title: "Post #{p}", text: "Text #{p}", comments_counter: 10, author_id: subject.id,
+                    likes_counter: 10)
       end
     end
   end
