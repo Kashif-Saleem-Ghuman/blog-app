@@ -53,7 +53,7 @@ RSpec.describe Post, type: :model do
   it "updates the author's posts counter after saving a new post" do
     expect do
       Post.create(title: 'Test Post', text: 'Lorem ipsum', comments_counter: 0, likes_counter: 0, author_id: user.id)
-    end.to change { user.reload.posts_counter }.from(0).to(1)
+    end.to(change { user.reload.posts_counter }.from(0).to(1))
   end
 
   it "updates the author's posts counter after updating an existing post" do
@@ -61,6 +61,6 @@ RSpec.describe Post, type: :model do
                        author_id: user.id)
     expect do
       post.update(title: 'Updated Post')
-    end.to_not change { user.reload.posts_counter }
+    end.to_not(change { user.reload.posts_counter })
   end
 end
