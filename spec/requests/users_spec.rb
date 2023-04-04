@@ -8,6 +8,9 @@ RSpec.describe '/Users', type: :request do
     it 'renders a successful response' do
       expect(response).to be_successful
     end
+    it 'renders the correct template' do
+      expect(response).to render_template(:index)
+    end
     it 'contains the correct text' do
       expect(response.body).to include('Here is a list of all users')
     end
@@ -19,6 +22,9 @@ RSpec.describe '/Users', type: :request do
     end
     it 'renders a successful response' do
       expect(response).to be_successful
+    end
+    it 'renders the correct template' do
+      expect(response).to render_template(:show)
     end
     it 'contains the correct text' do
       expect(response.body).to include('Here are the detials about User XYZ')
