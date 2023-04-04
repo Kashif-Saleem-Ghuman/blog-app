@@ -3,15 +3,17 @@
 # 📗 Table of Contents
 
 - [� Table of Contents](#-table-of-contents)
-- [📖 ROR Blog app ](#-ror-blog-app-)
+- [📖 BLOG APP ](#-blog-app)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Usage](#usage)
-  - [🔭 Future Features ](#-future-features-)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -59,25 +61,54 @@
 
 ## Getting Started
 
-**Please follow the steps below to setup this project in your local computer**
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-A basic understanding of Ruby and Git
+
+> You need the following tools be installed in your computer:
+
+> - [Rails](https://guides.rubyonrails.org/)
+> - [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+> - [Ruby](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
+> - IDE
+> - Etc
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-prefered-folder
+  
+  git clone https://github.com/Kashif-Saleem-Ghuman/blog-app.git
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  cd blog-app
+  
+  bundle install
+```
+
 ### Usage
-1. Install Ruby
-2. Clone this repo `git clone https://github.com/Kashif-Saleem-Ghuman/blog-app.git`
-3. gem install rails` (Ruby gem)
 
-<!-- FUTURE FEATURES -->
+To run the project, execute the following command:
 
-## 🔭 Future Features <a name="future-features"></a>
+```sh
+  rails server or rails s
+```
 
-- [ ] **Add posts**
-- [ ] **Delete Posts**
-- [ ] **Edit Posts**
-- [ ] **Edit and delete comments**
+### Run tests
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+To run tests, run the following command:
+
+
+```sh
+  rspec spec/
+```
 
 <!-- AUTHORS -->
 
@@ -89,6 +120,17 @@ A basic understanding of Ruby and Git
 - Twitter: [Kashif](https://twitter.com/Kashif14Saleem)
 - LinkedIn: [Kashif](https://www.linkedin.com/in/kashifsaleemghuman/)
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Add posts**
+- [ ] **Delete Posts**
+- [ ] **Edit Posts**
+- [ ] **Edit and delete comments**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
