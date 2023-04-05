@@ -8,9 +8,22 @@
         </section>
         <section class="Bio">
           <div class = "flex-column">
-            <h3>Bio :</h3>  
+            <h3 class="fs-3">Bio :</h3>  
             <p><%= @users.Bio %></p>
           </div>
+        </section>
+
+        <section class="posts-container">
+            <% @users.recent_posts.each_with_index do |post,index| %>
+              <a class="flex-column posts td-none" href="<%= @users.id%>/posts/<%=post.id%>">
+                <h3 class="fs-3">Post #<%= index+1 %></h3> 
+                 <p> <%= post.title %> </p>
+                 <div class="flex-row-end td-none">
+                  <p>Comments: <%= post.comments_counter %> </p>
+                  <p>Likes: <%= post.likes_counter %> </p>
+                 </div>
+              </a>
+            <% end %>
         </section>
     
 

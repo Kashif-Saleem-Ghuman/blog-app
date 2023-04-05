@@ -45,9 +45,34 @@
   border-radius: 0.5rem;
   box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
   padding: 2vw;
+  margin-bottom: 2vw;
  }
 
  .flex-column {
   display: flex;
   flex-direction: column;
+ }
+
+ .flex-row-end {
+  display: flex;
+  gap: 1vw ;
+  justify-content: flex-end;
+  margin-right: 2vw;
+  
+ }
+
+ .td-none{
+  text-decoration: none;
+  color: black;
+ }
+
+ .posts {
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+  padding: 2vw;
+  margin-bottom: 2vw;
+ }
+
+ .fs-3{
+  font-size: 3vw;
  }
