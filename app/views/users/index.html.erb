@@ -3,12 +3,12 @@
       
         <section class="user">
           <img class="image" src="<%= user.photo %>" alt="User Avatar" />
-          <div class="user-info">
+          <a class="user-info" title="view user details" href="/users/<%= user.id %>">
             <h2><%= user.name %></h2>
               
             <p class="post-count">Number of posts: <%= user.posts_counter || 0 %> </p>
               
-          </div>
+          </a>
         </section>
     
   <% end %>
