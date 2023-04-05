@@ -17,15 +17,26 @@
  .user {
   display: grid;
   grid-template-columns: 20vw 1fr;
-  margin: 10px;
+  margin-bottom: 5vw;
   column-gap: 1vw;
  }
 
  .user-info {
   display: flex; 
-  border: 1px solid black;
+ align-items: center;
   justify-content: space-around;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
  }
  .image {
   width: 20vw;
+ }
+
+ .user-name {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
  }
