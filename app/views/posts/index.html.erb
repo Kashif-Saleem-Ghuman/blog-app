@@ -1,10 +1,25 @@
 <article>
+
   <section class="user">
   <img class="image" src="<%=@users.photo %>" alt="User Avatar" />
     <div class="user-info">
       <h2 class="user-name"><%= @users.name %></h2>
       <p class="post-count">Number of posts: <%= @users.posts_counter%> </p>
     </div>
+  </section>
+
+  <section class="posts-container">
+    <%= @posts.each_with_index do |post,index| %>
+      <a class="flex-column posts td-none" href="posts/<%=post.id%>">
+        <h3 class="fs-3" >Post #<%= index+1 %></h3>
+        <p> <%= post.title %> </p>
+        <div class="flex-row-end td-none">
+          <p>Comments: <%= post.comments_counter %> </p>
+          <p>Likes: <%= post.likes_counter %> </p>
+        </div>
+      
+      </a>
+      <% end %>
   </section>
     
 </article>
