@@ -13,117 +13,115 @@
  *= require_tree .
  *= require_self
  */
- .user {
+.user {
   display: grid;
   grid-template-columns: 20vw 1fr;
   margin-bottom: 5vw;
   column-gap: 1vw;
- }
+}
 
- .user-info {
-  display: flex; 
- align-items: center;
+.user-info {
+  display: flex;
+  align-items: center;
   justify-content: space-around;
   text-decoration: none;
   color: black;
   background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
- }
- .image {
-  width: 20vw;
- }
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
 
- .user-name {
+.image {
+  width: 20vw;
+}
+
+.user-name {
   font-size: 2.5em;
   font-weight: bold;
   margin: 0;
- }
+}
 
- .Bio {
-  display: flex 1;
+.Bio {
+  display: flex;
+  flex: 1;
   border-radius: 0.5rem;
-  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
   padding: 2vw;
   margin-bottom: 2vw;
- }
+}
 
- .flex-column {
+.flex-column {
   display: flex;
   flex-direction: column;
- }
+}
 
- .flex-row-end {
+.flex-row-end {
   display: flex;
-  gap: 1vw ;
+  gap: 1vw;
   justify-content: flex-end;
   margin-right: 2vw;
-  
- }
+}
 
- .flex-row-middle {
+.flex-row-middle {
   display: flex;
-  gap: 1vw ;
+  gap: 1vw;
   justify-content: center;
   margin-right: 2vw;
   padding: 2vw;
-  
- }
+}
 
- .td-none{
+.td-none {
   text-decoration: none;
   color: black;
- }
+}
 
- .posts {
+.posts {
   border-radius: 0.5rem;
-  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
   padding: 2vw;
   margin-bottom: 2vw;
- }
+}
 
- .fs-3{
+.fs-3 {
   font-size: 3vw;
- }
+}
 
- .button {
+.button {
   background-color: rgb(42, 42, 42); /* Green */
   border: none;
   color: white;
   padding: 2vw;
   text-decoration: none;
   font-size: 3vw;
-  margin: 1vw;
   cursor: pointer;
   border-radius: 0.5rem;
   width: fit-content;
-  margin: auto auto;
+  margin: 1vw auto 1vw auto;
 }
 
-.comments-container{
+.comments-container {
   border-radius: 0.5rem;
-  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
   padding: 2vw;
 }
 
-.post-comment-container{
+.post-comment-container {
   margin-bottom: 5vw;
   padding: 2vw;
 }
 
-.dflex-saround{
+.dflex-saround {
   display: flex;
   justify-content: space-between;
   padding: 2vw;
-
 }
 
-.container-post-id{
+.container-post-id {
   border-radius: 0.5rem;
-  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 2vw;
 }
 
-.post-title-id{
-  padding: 2vw;;
+.post-title-id {
+  padding: 2vw;
 }
