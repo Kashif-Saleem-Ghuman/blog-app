@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ .user {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  margin: 10px;
+  column-gap: 1vw;
+ }
+
+ .user-info {
+  display: flex; 
+  border: 1px solid black;
+  justify-content: space-around;
+ }
+ .image {
+  width: 20vw;
+ }
