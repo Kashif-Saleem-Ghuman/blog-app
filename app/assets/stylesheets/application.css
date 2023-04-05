@@ -103,10 +103,12 @@
 .comments-container{
   border-radius: 0.5rem;
   box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+  padding: 2vw;
 }
 
 .post-comment-container{
   margin-bottom: 5vw;
+  padding: 2vw;
 }
 
 .dflex-saround{
