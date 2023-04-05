@@ -5,9 +5,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id]).order(created_at: :desc)
-    @users = User.find(params[:id]).order(created_at: :desc)
-    @comments = @post.comments.order(created_at: :desc)
+    @post = Post.find(params[:id])
+    @users = User.find(params[:user_id])
+    @comments = @post.comments
     @likes = @post.likes
   end
 end
