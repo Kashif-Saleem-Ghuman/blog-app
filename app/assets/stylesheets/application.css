@@ -99,3 +99,12 @@
   width: fit-content;
   margin: auto auto;
 }
+
+.comments-container{
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.50);
+}
+
+.post-comment-container{
+  margin-bottom: 5vw;
+}

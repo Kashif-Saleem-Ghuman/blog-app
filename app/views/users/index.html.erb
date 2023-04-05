@@ -6,7 +6,7 @@
           <a class="user-info" title="view user details" href="/users/<%= user.id %>">
             <h2 class="user-name"><%= user.name %></h2>
               
-            <p class="post-count">Number of posts: <%= user.posts_counter%> </p>
+            <p class="post-count">Number of posts: <%= user.posts_counter || 0%> </p>
               
           </a>
         </section>
