@@ -61,6 +61,15 @@
   
  }
 
+ .flex-row-middle {
+  display: flex;
+  gap: 1vw ;
+  justify-content: center;
+  margin-right: 2vw;
+  padding: 2vw;
+  
+ }
+
  .td-none{
   text-decoration: none;
   color: black;
@@ -76,3 +85,17 @@
  .fs-3{
   font-size: 3vw;
  }
+
+ .button {
+  background-color: rgb(42, 42, 42); /* Green */
+  border: none;
+  color: white;
+  padding: 2vw;
+  text-decoration: none;
+  font-size: 3vw;
+  margin: 1vw;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  width: fit-content;
+  margin: auto auto;
+}
