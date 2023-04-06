@@ -1,2 +1,17 @@
-<h1>Here is a list of all users</h1>
+<article class="user-container">
+  <% @users.each do |user| %>
+      
+        <section class="user">
+          <img class="image" src="<%= user.photo %>" alt="User Avatar" />
+          <a class="user-info" title="view user details" href="/users/<%= user.id %>">
+            <h2 class="user-name"><%= user.name %></h2>
+              
+            <p class="post-count">Number of posts: <%= user.posts_counter || 0%> </p>
+              
+          </a>
+        </section>
+    
+  <% end %>
+</article>
+
 

@@ -1,1 +1,31 @@
-<h1>Here is the post X of User Y</h1>
+<article>
+
+  <section class="container-post-id">
+    <div class="dflex-saround">
+      <h3>Post # <%= @post.id %> by <%= @post.author.name %><h3>
+      <div>
+        <span>Comments: <%= @post.comments_counter %></span>
+        <span>Likes: <%= @post.likes_counter %></span>
+      </div>
+    </div>
+
+    <div class="post-title-id">
+      <h2><%= @post.title %></h2>
+    </div>
+  
+  </section>
+
+  <section>
+
+  <div class="comments-container">
+  Comments: 
+    <div class="flex-column">
+    <% @comments.each do |comment| %>
+      <span><%= comment.author.name %> : <%= comment.text %></span> 
+    <% end %> 
+    </div>
+</div>
+  </section>
+
+
+</article>
