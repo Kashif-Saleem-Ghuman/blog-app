@@ -28,5 +28,8 @@
   </section>
 <a class="td-none flex-row-middle button" 
 href = "<%= new_user_post_path(@users) %>">Add New Post</a>
+<button class="td-none flex-row-middle button ">
+<%= link_to "add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new"%>
+</button>
 
 </article>
