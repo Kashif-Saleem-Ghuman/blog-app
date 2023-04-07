@@ -70,7 +70,6 @@
   padding: 2vw;
 }
 
-
 .posts {
   border-radius: 0.5rem;
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
@@ -124,7 +123,6 @@
 
 .button-container {
   display: flex;
-
 }
 
 .a:-webkit-any-link {

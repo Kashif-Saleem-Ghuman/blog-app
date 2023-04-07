@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'Comment not created!'
     end
     redirect_to user_post_path(params[:user_id], params[:post_id])
-
   end
 
   private

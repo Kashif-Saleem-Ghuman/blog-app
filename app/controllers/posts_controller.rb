@@ -11,7 +11,6 @@ class PostsController < ApplicationController
     @like = Like.new
   end
 
-
   def new
     @user = current_user(params[:user_id])
     @post = Post.new
@@ -21,7 +20,7 @@ class PostsController < ApplicationController
     @user = current_user(params[:user_id])
     @post = @user.posts.new(author: @user, title: params[:post][:title], text: params[:post][:text])
     if @post.save
-      @post.update_posts_counter 
+      @post.update_posts_counter
       flash[:notice] = 'Your post was created successfully'
       redirect_to user_post_path(@user, @post)
     else
@@ -33,7 +32,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-      params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
-
 end
