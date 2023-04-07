@@ -17,7 +17,7 @@
 
     <%= form_with model: [@post, @like], url: create_post_like_path  do |form| %>
       <div class="mb-4 flex flex-col">
-        <%= form.submit "Like 👍" , class: "text-[#11537d] text-xl font-medium bg-white px-4 py-2 rounded-[15px] w-fit cursor-pointer" %>
+        <%= form.submit "Like 👍" , class: "likes" %>
       </div>
     <% end %>
 
