@@ -38,15 +38,15 @@
   </section>
 
 <section class="button-container">
-  <a class="td-none flex-row-middle button" 
+  <a class="button" 
   href = "<%= new_user_post_path(@users) %>">Add New Post
   </a>
 
-  <button class="td-none flex-row-middle button ">
+  <button class="button ">
   <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>
   </button>
 
-  <button class="td-none flex-row-middle button ">
+  <button class="button ">
   <%= link_to "Back", user_posts_path(@users), class: "button" %>
   </button>
 
