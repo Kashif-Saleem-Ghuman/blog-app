@@ -12,20 +12,44 @@
     <div class="post-title-id">
       <h2><%= @post.title %></h2>
     </div>
+
+    
+
+    <%= form_with model: [@post, @like], url: create_post_like_path  do |form| %>
+      <div class="mb-4 flex flex-col">
+        <%= form.submit "Like 👍" , class: "likes" %>
+      </div>
+    <% end %>
+
   
   </section>
 
   <section>
 
-  <div class="comments-container">
-  Comments: 
-    <div class="flex-column">
-    <% @comments.each do |comment| %>
-      <span><%= comment.author.name %> : <%= comment.text %></span> 
-    <% end %> 
+    <div class="comments-container">
+    Comments: 
+      <div class="flex-column">
+      <% @comments.each do |comment| %>
+        <span><%= comment.author.name %> : <%= comment.text %></span> 
+      <% end %> 
+      </div>
     </div>
-</div>
+
   </section>
 
+<section class="button-container">
+  <a class="button" 
+  href = "<%= new_user_post_path(@users) %>">Add New Post
+  </a>
+
+  <button class="button ">
+  <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>
+  </button>
+
+  <button class="button ">
+  <%= link_to "Back", user_posts_path(@users), class: "button" %>
+  </button>
+
+</section>
 
 </article>

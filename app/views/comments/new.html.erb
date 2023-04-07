@@ -1,0 +1,15 @@
+<%= form_with model: [@post, @comment], url: create_post_comment_path  do |form| %>
+  <% if @comment.errors.any? %>
+    <div>
+      <% @comment.errors.full_messages.each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="">
+    <%= form.text_field :text, placeholder: "Add new comment here", class: "" %>
+  </div>
+  <div class="">
+    <%= form.submit "Comment" %>
+  </div>
+<% end %>
