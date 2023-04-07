@@ -70,10 +70,6 @@
   padding: 2vw;
 }
 
-.td-none {
-  text-decoration: none;
-  color: black;
-}
 
 .posts {
   border-radius: 0.5rem;
@@ -89,10 +85,10 @@
 .button {
   background-color: rgb(42, 42, 42); /* Green */
   border: none;
-  color: white;
-  padding: 2vw;
-  text-decoration: none;
-  font-size: 3vw;
+  color: white !important;
+  padding: 0.5vw;
+  text-decoration: none !important;
+  font-size: 1.5vw;
   cursor: pointer;
   border-radius: 0.5rem;
   width: fit-content;
@@ -124,4 +120,19 @@
 
 .post-title-id {
   padding: 2vw;
+}
+
+.button-container {
+  display: flex;
+
+}
+
+.a:-webkit-any-link {
+  text-decoration: none;
+  color: black;
+}
+
+.td-none {
+  text-decoration: none;
+  color: black;
 }
