@@ -9,13 +9,13 @@
   <% end %>
   <%= form_with model: @post, url: user_posts_path(@user) do |form| %>
     <div>
-      <%= form.label :title, class: "form-label" %>
-      <%= form.text_field :title, required: true, autofocus: true, class: "form-input" %>
+      <%= form.label :title, class: "" %>
+      <%= form.text_field :title, required: true, autofocus: true, class: "" %>
     </div>
     <div>
       <%= form.label :text, class: "form-label" %>
-      <%= form.text_area :text, required: true, autofocus: true, class: "form-input" %>
+      <%= form.text_area :text, required: true, autofocus: true, class: "" %>
     </div>
-    <%= form.submit "submit", class: "form-button" %>
+    <%= form.submit "submit", class: "" %>
   <% end %>
 </section>
