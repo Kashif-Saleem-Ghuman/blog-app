@@ -42,7 +42,6 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_link('See all posts')
     end
 
-
     it "When I click a user's post, it redirects me to that post's show page" do
       click_link(@last_post.title)
       expect(page).to have_current_path(user_post_path(@user, @last_post))

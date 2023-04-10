@@ -4,11 +4,11 @@ RSpec.describe 'Users', type: :system do
   describe 'User index page' do
     before(:each) do
       @user = User.create(name: 'John Doe',
-      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-      Bio: 'I am a Full Stack Developer',
-      posts_counter: 4)
-      
-     visit users_path
+                          photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                          Bio: 'I am a Full Stack Developer',
+                          posts_counter: 4)
+
+      visit users_path
     end
 
     it 'displays the user name of all other users' do
@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :system do
       expect(page.body).to include(@user.photo)
     end
 
-    it 'displays the number of posts each user has written' do 
+    it 'displays the number of posts each user has written' do
       expect(page).to have_content(@user.posts_counter)
     end
 
