@@ -53,7 +53,7 @@ RSpec.describe 'Posts', type: :system do
       expect(page).to have_content(@first_post.likes_counter)
     end
 
-    it "I can see a section for pagination if there are more posts than fit on the view" do
+    it 'I can see a section for pagination if there are more posts than fit on the view' do
       expect(page).to have_content('Pagination')
     end
 
