@@ -9,7 +9,7 @@
   </section>
 
   <section class="posts-container">
-    <%= @posts.each_with_index do |post,index| %>
+    <% @posts.each_with_index do |post,index| %>
       <section class="post-comment-container">
         <a class="flex-column posts td-none" href="posts/<%=post.id%>">
           <h3 class="fs-3" >Post #<%= index+1 %></h3>
@@ -32,5 +32,8 @@
       </section>
     <%end %>
   </section>
+  <div>
+    <p class="button" >Pagination</p>
+  </div>
     
 </article>
