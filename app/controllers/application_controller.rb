@@ -11,7 +11,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :Bio, :email, :password, :password_confirmation, :current_password)
     end
   end
-  # def current_user(id)
-  #   User.find(id)
-  # end
 end
