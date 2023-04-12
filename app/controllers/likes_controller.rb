@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   def create
-    @like = current_user(params[:user_id]).likes.new
+    @like = current_user.likes.new
     @like.post_id = params[:id]
     if @like.save
       redirect_to user_post_path(@like.post.author_id, @like.post), notice: 'like added successfully'
