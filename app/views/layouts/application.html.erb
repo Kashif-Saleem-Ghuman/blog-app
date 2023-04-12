@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <% if user_signed_in? %> 
+    <div class="flex-row-end">
+      <p class="button"><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?', class:  } %></p>
+    </div>
+  <% else %>
+    <div class="flex-row-end">
+      <p class="button"><%= link_to 'Sign in', new_user_session_path %></p>
+      <p class="button"><%= link_to 'Sign up', new_user_registration_path %></p>
+    </div>
+  <% end %>
+  <%= yield %>  
   </body>
 </html>
