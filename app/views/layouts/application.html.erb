@@ -15,12 +15,12 @@
   <p class="alert"><%= alert %></p>
   <% if user_signed_in? %> 
     <div class="flex-row-end">
-      <p class="button"><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?', class:  } %></p>
+      <p class="sign-out"><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' },class: "button" %></p>
     </div>
   <% else %>
     <div class="flex-row-end">
-      <p class="button"><%= link_to 'Sign in', new_user_session_path %></p>
-      <p class="button"><%= link_to 'Sign up', new_user_registration_path %></p>
+      <p class="sign-out"><%= link_to 'Sign in', new_user_session_path, class: "button"  %></p>
+      <p class="sign-out"><%= link_to 'Sign up', new_user_registration_path, class: "button"  %></p>
     </div>
   <% end %>
   <%= yield %>  

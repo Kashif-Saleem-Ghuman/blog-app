@@ -138,3 +138,15 @@
 .likes {
   margin: 2vw;
 }
+
+.sign-out {
+  background-color: rgb(42, 42, 42); /* Green */
+  border: none;
+  color: white !important;
+  padding: 0.5vw;
+  text-decoration: none !important;
+  font-size: 1.5vw;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  width: fit-content;
+}
