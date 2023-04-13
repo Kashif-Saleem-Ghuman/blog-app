@@ -18,7 +18,9 @@ class PostsController < ApplicationController
 
   def create
     @user = current_user
-    @post = @user.posts.new(author: @user, title: params[:post][:title], text: params[:post][:text])
+    # @post = @user.posts.new(author: @user, title: params[:post][:title], text: params[:post][:text])
+    @post = Post.new(post_params)
+    @post.author = @user
     if @post.save
       @post.update_posts_counter
       flash[:notice] = 'Your post was created successfully'
@@ -26,6 +28,20 @@ class PostsController < ApplicationController
     else
       render :new
       flash.alert = 'sorry, something went wrong!'
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:user_id]) # current_user
+    post = Post.find(params[:id])
+    post.comments.destroy_all
+    post.likes.destroy_all
+    if post.destroy
+      flash[:success] = 'Post deleted successfully'
+      redirect_to user_posts_path(@user)
+    else
+      flash.now[:error] = 'Error: Post could not be deleted'
+      redirect_to user_post_path(@user, post)
     end
   end
 

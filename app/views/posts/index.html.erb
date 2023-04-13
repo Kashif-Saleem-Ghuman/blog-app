@@ -18,6 +18,10 @@
             <p>Comments: <%= post.comments_counter %> </p>
             <p>Likes: <%= post.likes_counter %> </p>
           </div>
+
+          <% if can? :destroy, post %>
+          <%= button_to 'Delete', "/users/#{post.author_id}/posts/#{post.id}", :method => :delete, class: "button" %>
+        <% end %>
         </a>
    
 
@@ -33,7 +37,9 @@
     <%end %>
   </section>
   <div>
+  
     <p class="button" >Pagination</p>
+
   </div>
     
 </article>

@@ -37,23 +37,23 @@
 
   </section>
 
-<section class="button-container">
-  <a class="button" 
-  href = "<%= new_user_post_path(@users) %>">Add New Post
-  </a>
+  <section class="button-container">
+    <a class="button" 
+    href = "<%= new_user_post_path(@users) %>">Add New Post
+    </a>
 
-  <button class="button ">
-  <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>
-  </button>
+    <button class="button ">
+    <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>
+    </button>
 
-  <% if can? :destroy, @post %>
-    <%= button_to 'Delete', "/users/#{@post.author_id}/posts/#{@post.id}, :method => :delete, class: 'btn btn-outline-danger' %>
-  <% end %>
+    <% if can? :destroy, @post %>
+      <%= button_to 'Delete', "/users/#{@post.author_id}/posts/#{@post.id}", :method => :delete, class: "button" %>
+    <% end %>
 
-  <button class="button ">
-  <%= link_to "Back", user_posts_path(@users), class: "button" %>
-  </button>
+    <button class="button ">
+    <%= link_to "Back", user_posts_path(@users), class: "button" %>
+    </button>
 
-</section>
+  </section>
 
 </article>
