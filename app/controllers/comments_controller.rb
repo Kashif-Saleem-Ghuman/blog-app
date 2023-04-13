@@ -19,11 +19,10 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     if @comment.destroy
       flash[:success] = 'Comment deleted successfully'
-      redirect_to user_post_path(@post.author, @post)
     else
       flash.now[:error] = 'Error: Comment could not be deleted'
-      redirect_to user_post_path(@post.author, @post)
     end
+    redirect_to user_post_path(@post.author, @post)
   end
 
   private
