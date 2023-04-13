@@ -27,12 +27,16 @@
   <section>
 
     <div class="comments-container">
-    Comments: 
-      <div class="flex-column">
-      <% @comments.each do |comment| %>
-        <span><%= comment.author.name %> : <%= comment.text %></span> 
-      <% end %> 
-      </div>
+      Comments: 
+        <div class="flex-column">
+        <% @comments.each do |comment| %>
+          <span><%= comment.author.name %> : <%= comment.text %></span> 
+          <% if can? :destroy, comment %>
+            <%= button_to "Delete Comment", comment_destroy_path(@users, @post.author_id, @post, comment), method: :delete, class: "button" %>
+          <% end %>
+        <% end %> 
+        </div>
+     
     </div>
 
   </section>
@@ -45,10 +49,6 @@
     <button class="button ">
     <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>
     </button>
-
-    <% if can? :destroy, @post %>
-      <%= button_to 'Delete', "/users/#{@post.author_id}/posts/#{@post.id}", :method => :delete, class: "button" %>
-    <% end %>
 
     <button class="button ">
     <%= link_to "Back", user_posts_path(@users), class: "button" %>

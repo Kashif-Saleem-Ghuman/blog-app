@@ -24,6 +24,12 @@
                   <p>Likes: <%= post.likes_counter %> </p>
                  </div>
               </a>
+
+              <% if can? :destroy, post %>
+              <%= button_to 'Delete', "/users/#{post.author_id}/posts/#{post.id}", :method => :delete, class: "button" %>
+            <% end %>
+
+           
             <% end %>
         </section>
 
