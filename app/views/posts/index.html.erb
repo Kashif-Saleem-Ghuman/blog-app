@@ -17,12 +17,12 @@
           <div class="flex-row-end td-none">
             <p>Comments: <%= post.comments_counter %> </p>
             <p>Likes: <%= post.likes_counter %> </p>
-          </div>
-
-          <% if can? :destroy, post %>
+          </div>  
+        </a>
+        
+        <% if can? :destroy, post %>
           <%= button_to 'Delete', "/users/#{post.author_id}/posts/#{post.id}", :method => :delete, class: "button" %>
         <% end %>
-        </a>
    
 
         <div class="comments-container">
