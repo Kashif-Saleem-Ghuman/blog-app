@@ -46,6 +46,10 @@
   <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>
   </button>
 
+  <% if can? :destroy, @post %>
+    <%= button_to 'Delete', "/users/#{@post.author_id}/posts/#{@post.id}, :method => :delete, class: 'btn btn-outline-danger' %>
+  <% end %>
+
   <button class="button ">
   <%= link_to "Back", user_posts_path(@users), class: "button" %>
   </button>
