@@ -32,8 +32,8 @@
         <% @comments.each do |comment| %>
           <span><%= comment.author.name %> : <%= comment.text %></span> 
           <% if can? :destroy, comment %>
-            <%= button_to "Delete Comment", comment_destroy_path(@users, @post.author_id, @post, comment), method: :delete, class: "button" %>
-          <% end %>
+             <%= button_to "Delete Comment", comment_destroy_path(@post.author_id, @post, comment), method: :delete, class: "button" %>
+           <% end %>
         <% end %> 
         </div>
      
@@ -42,9 +42,15 @@
   </section>
 
   <section class="button-container">
-    <a class="button" 
-    href = "<%= new_user_post_path(@users) %>">Add New Post
-    </a>
+   
+
+    <% if @users.id == current_user.id %>
+    <button class="button">
+        <%= link_to "Create post", new_user_post_path(@users), class: "button" %>
+    </button>
+<% end %>
+
+
 
     <button class="button ">
     <%= link_to "Add comment", "/users/#{@post.author_id}/posts/#{@post.id}/comments/new", class: "button"%>

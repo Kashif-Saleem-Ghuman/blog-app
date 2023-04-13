@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @users = User.find(params[:user_id])
     @posts = Post.includes(:author, :comments, :likes).where(author: @users)
@@ -18,7 +19,6 @@ class PostsController < ApplicationController
 
   def create
     @user = current_user
-    # @post = @user.posts.new(author: @user, title: params[:post][:title], text: params[:post][:text])
     @post = Post.new(post_params)
     @post.author = @user
     if @post.save
