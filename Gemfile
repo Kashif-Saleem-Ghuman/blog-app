@@ -9,7 +9,6 @@ gem 'devise'
 
 gem 'letter_opener', group: :development
 
-
 gem 'cancancan'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

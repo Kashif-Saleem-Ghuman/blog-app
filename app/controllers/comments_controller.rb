@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
   end
 
-    def create
+  def create
     @comment = Comment.new(comment_params)
     @comment.author = current_user
     @comment.post = Post.find(params[:post_id])
@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 
     redirect_to user_post_path(current_user.id, params[:post_id])
   end
-  
+
   def destroy
     @post = Post.find(params[:post_id]) # current_user
     @comment = Comment.find(params[:id])
@@ -24,11 +24,7 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'Error: Comment could not be deleted'
       redirect_to user_post_path(@post.author, @post)
     end
-
-
   end
-
-
 
   private
 
