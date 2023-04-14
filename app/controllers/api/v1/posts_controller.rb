@@ -1,7 +1,7 @@
 class Api::V1::PostsController < ApplicationController
   def index
     user = User.find(params[:user_id])
-    post = user.post
-    render json: post
+    posts = user.posts
+    render json: posts
   end
 end
