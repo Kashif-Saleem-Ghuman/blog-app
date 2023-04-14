@@ -179,3 +179,16 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
+.button-small {
+  background-color: rgb(42, 42, 42); /* Green */
+  border: none;
+  color: white !important;
+  padding: 0.5vw;
+  text-decoration: none !important;
+  font-size: 1vw;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: fit-content;
+  margin: 1vw auto 1vw auto;
+}

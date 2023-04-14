@@ -2,8 +2,8 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 BLOG APP ](#-blog-app)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[BLOG APP\] ](#-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -11,6 +11,7 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [Usage](#usage)
     - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -120,7 +121,12 @@ To run tests, run the following command:
 - Twitter: [Kashif](https://twitter.com/Kashif14Saleem)
 - LinkedIn: [Kashif](https://www.linkedin.com/in/kashifsaleemghuman/)
 
+ 👤 **Harrison Njuguna**
 
+  - GitHub: [@Harrynoqs](https://github.com/Harrynoqs)
+  - Twitter: [@Harrynoqs](https://twitter.com/noqsnoq1)
+  - LinkedIn: [harrisonw-njuguna](https://linkedin.com/in/harrisonw-njuguna)
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

@@ -17,8 +17,12 @@
           <div class="flex-row-end td-none">
             <p>Comments: <%= post.comments_counter %> </p>
             <p>Likes: <%= post.likes_counter %> </p>
-          </div>
+          </div>  
         </a>
+        
+        <% if can? :destroy, post %>
+          <%= button_to 'Delete', "/users/#{post.author_id}/posts/#{post.id}", :method => :delete, class: "button" %>
+        <% end %>
    
 
         <div class="comments-container">
@@ -32,8 +36,8 @@
       </section>
     <%end %>
   </section>
+  
   <div>
     <p class="button" >Pagination</p>
-  </div>
-    
+  </div>   
 </article>
