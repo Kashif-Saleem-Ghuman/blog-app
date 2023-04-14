@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-ruby '3.1.3'
+ruby '3.2.1'
 
 gem 'devise'
 
@@ -11,8 +11,8 @@ gem 'letter_opener', group: :development
 
 gem 'cancancan'
 
-gem 'jwt'
 gem 'devise-jwt'
+gem 'jwt'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
