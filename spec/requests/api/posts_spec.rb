@@ -1,7 +1,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/posts', type: :request do
-
   path '/api/users/{user_id}/posts' do
     # You'll want to customize the parameter types...
     parameter name: :user_id, in: :path, type: :string, description: 'user_id'
@@ -13,7 +12,7 @@ RSpec.describe 'api/posts', type: :request do
       let(:Authorization) { auth_header(user) }
 
       response(200, 'successful') do
-          after do |example|
+        after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
               example: JSON.parse(response.body, symbolize_names: true)

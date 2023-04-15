@@ -1,9 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/login', type: :request do
-
   path '/api/login' do
-
     post('list logins') do
       tags 'Login'
       consumes 'application/json'
@@ -13,7 +11,7 @@ RSpec.describe 'api/login', type: :request do
           email: { type: :string },
           password: { type: :string }
         },
-        required: [ 'email', 'password' ]
+        required: %w[email password]
       }
 
       response(200, 'successful') do
